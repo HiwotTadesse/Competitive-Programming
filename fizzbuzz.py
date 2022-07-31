@@ -1,22 +1,14 @@
-
-
-from pip import List
-
-
-class Solution:
+lass Solution:
     def fizzBuzz(self, n: int) -> List[str]:
-            
-            x = []
-            for i in range(1,n+1):
-                if i % 3 == 0:
-                    x.append('Fizz')
-                elif i % 5 == 0:
-                    x.append('Buzz')
-                elif i % 5 == 0 and  i % 3 == 0:
-                    x.append('FizzBuzz')
-                else:
-                    x.append(str(i))
-            return x
-
-solution = Solution()
-print(solution.fizzBuzz(6))
+        
+        x = []
+        for i in range(1,n+1):
+            if i % 3 == 0 and i % 5 != 0:
+                x.append('Fizz')
+            elif i % 5 == 0 and i % 3 != 0 :
+                x.append('Buzz')
+            elif i % 5 == 0 and  i % 3 == 0:
+                x.append('FizzBuzz')
+            else:
+                x.append(str(i))
+        return x
